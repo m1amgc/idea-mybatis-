@@ -1,0 +1,8 @@
+1、首先创建一个maven项目。
+2、创建完maven项目之后就修改其中的pom.xml文件，要注意其中的参数finalName，最好改为数据库的名字。
+3、修改完pom.xml文件之后就要修改generatorSqlmapCuston.xml文件。
+4、查看idea中是否有Mybatis plugin插件，查询过程：idea左上角的File-Settings，然后在搜索中打Mybatis plugin，如果没有就下载。
+5、添加mybatis plugin插件的设置，点击Run-Edit Configurations的+号，然后选择maven，之后填写name（最好填写generatorSqlmapCuston），然后在
+  Working directory选择generatorSqlmapCuston的项目路径，之后在Command line中写入mybatis-generator:generate -e。
+6、填写完配置之后，在Maven project中查找generatorSqlmapCuston项目，点击之后选择Run Configurations，双击generatorSqlmapCuston。
+7、现在，mybatis逆向工程就运行成功了。
